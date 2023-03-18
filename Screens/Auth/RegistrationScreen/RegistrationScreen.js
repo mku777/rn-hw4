@@ -17,7 +17,7 @@ import {
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 
-import Add from "../../assets/images/add.svg";
+import Add from "../../../assets/images/add.svg";
 
 const RegistrationScreen = ({ navigation }) => {
   const [login, setLogin] = useState("");
@@ -74,8 +74,8 @@ const RegistrationScreen = ({ navigation }) => {
   };
 
   const [fonts] = useFonts({
-    RobotoBold: require("../../assets/fonts/Roboto-Bold.ttf"),
-    RobotoRegular: require("../../assets/fonts/Roboto-Regular.ttf"),
+    RobotoBold: require("../../../assets/fonts/Roboto-Bold.ttf"),
+    RobotoRegular: require("../../../assets/fonts/Roboto-Regular.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -94,7 +94,7 @@ const RegistrationScreen = ({ navigation }) => {
         <View style={styles.containerFlex}>
           <ImageBackground
             style={styles.backgroundImg}
-            source={require("../../assets/images/background.png")}
+            source={require("../../../assets/images/background.png")}
           >
               <KeyboardAvoidingView
       onLayout={onLayoutRootView}
@@ -180,7 +180,11 @@ const RegistrationScreen = ({ navigation }) => {
                   <TouchableOpacity style={styles.button} onPress={onLogin}>
                     <Text style={styles.buttonText}>Sign Up</Text>
                   </TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("Login")}
+                  >
                     <Text style={styles.footer}>Already have an account? Log in</Text>
+                    </TouchableOpacity>
                 </View>
               </View>
               </KeyboardAvoidingView>

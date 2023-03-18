@@ -74,8 +74,8 @@ const LoginScreen = ({ navigation }) => {
   }, []);
 
   const [fonts] = useFonts({
-    RobotoBold: require("../../assets/fonts/Roboto-Bold.ttf"),
-    Roboto: require("../../assets/fonts/Roboto-Regular.ttf"),
+    RobotoBold: require("../../../assets/fonts/Roboto-Bold.ttf"),
+    Roboto: require("../../../assets/fonts/Roboto-Regular.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -96,7 +96,7 @@ const LoginScreen = ({ navigation }) => {
             width: phoneWidth,
             height: phoneHeidth,
           }}
-          source={require("../../assets/images/background.png")}
+          source={require("../../../assets/images/background.png")}
         >
           <KeyboardAvoidingView
             onLayout={onLayoutRootView}
@@ -163,7 +163,7 @@ const LoginScreen = ({ navigation }) => {
                   <Text style={styles.textButton}>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                // onPress={() => navigation.navigate("Register")}
+                onPress={() => navigation.navigate("Register")}
                 >
                   <Text style={styles.footer}>
                     Don't have an account? Register
