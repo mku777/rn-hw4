@@ -15,6 +15,10 @@ import {
 import Message from "../../assets/images/postImg/message.svg";
 import Like from "../../assets/images/postImg/like.svg";
 import Location from "../../assets/images/postImg/location.svg";
+import Logout from "../../assets/images/logout.svg";
+import Delete from "../../assets/images/delete.svg";
+
+
 
 import { profilePostArray } from "../../data/posts";
 
@@ -94,6 +98,12 @@ export const ProfileScreen = ({ navigation }) => {
                   width: windowWidth - 16 * 2,
                 }}
               >
+                <TouchableOpacity style={styles.addButton}>
+                  <Delete />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.logoutButton}>
+                  <Logout />
+                </TouchableOpacity>
                 <Text style={styles.userTitle}>Natali Romanova</Text>
               </View>
             </View>
@@ -169,6 +179,16 @@ const styles = StyleSheet.create({
   bgImage: {
     flex: 1,
     resizeMode: "cover",
+  },
+  addButton: {
+    position: "absolute",
+    top: -70,
+    right: 102,
+  },
+  logoutButton: {
+    position: "absolute",
+    top: -62,
+    right: 16,
   },
   contentContainer: {
     backgroundColor: "#FFFFFF",

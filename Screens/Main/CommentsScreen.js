@@ -117,7 +117,7 @@ export const CommentsScreen = () => {
         <TextInput
           value={comment}
           style={styles.input}
-          placeholder="Коментувати..."
+          placeholder="leave comment"
           cursorColor={"#BDBDBD"}
           placeholderTextColor={"#BDBDBD"}
           onChangeText={commentHandler}
