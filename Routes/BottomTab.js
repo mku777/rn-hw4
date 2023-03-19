@@ -19,7 +19,7 @@ export const BottomMenu = ({ navigation }) => {
     <BottomTab.Navigator
       screenOptions={{
         tabBarShowLabel: false,
-        tabBarStyle: { height: 80, justifyContent: "center" },
+        tabBarStyle: { height: 80 },
         headerTitleAlign: "center",
 
         headerRightContainerStyle: { paddingRight: 16, paddingBottom: 9 },

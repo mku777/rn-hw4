@@ -65,6 +65,7 @@ const RegistrationScreen = ({ navigation }) => {
     setEmail("");
     setPassword("");
     setIsShowKeyboard(false);
+    navigation.navigate("Home")
     Keyboard.dismiss();
   };
 
